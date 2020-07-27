@@ -1,0 +1,16 @@
+.left{
+	width: 200px;
+	border: 1px solid #ccc;
+	height: 900px;
+	float: left;
+	font-size: 25px;
+}
+.right{
+	border: 1px solid #ccc;
+	height: 900px;	
+}
+.btn-group{
+	margin-top: 38px;
+	margin-left: 5px;
+}
+
