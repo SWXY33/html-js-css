@@ -1,0 +1,16 @@
+<!--button-->
+<view class="btn" bindtap="powerDrawer" data-statu="open">button</view>
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_content">
+    <view class="drawer_title line">菜单1</view>
+    <view class="drawer_title line">菜单2</view>
+    <view class="drawer_title line">菜单3</view>
+    <view class="drawer_title line">菜单4</view>
+    <view class="drawer_title">菜单5</view>
+  </view>
+</view>

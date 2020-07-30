@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view>
+  <!--顶部轮播图  -->
+  <swiper indicator-dots="true" autoplay="true" interval='5000' indicator-active-color="red" circular="true">
+    <swiper-item>
+      <image class='top-img' src="/image/Desert.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image class='top-img' src='/image/Hydrangeas.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image class='top-img' src='/image/Lighthouse.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image class='top-img' src='/image/Jellyfish.jpg'></image>
+    </swiper-item>
+  </swiper>
+</view>
