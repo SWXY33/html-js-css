@@ -1,0 +1,16 @@
+<text class="title">黄金数据</text>
+<block wx:for="{{goldData}}" wx:key="this">
+<view class="gold">
+<view class="variety">|品种:{{item.variety}}</view>
+<view class="latestpri">|最新价:{{item.latestpri}}</view>
+<view class="openpri">|开盘价:{{item.openpri}}</view>
+<view class="maxpri">|最高价:{{item.maxpri}}</view>
+<view class="minpri">|最低价:{{item.minpri}}</view>
+<view class="limit">|涨跌幅:{{item.limit}}</view>
+<view class="yespri">|昨收价:{{item.yespri}}</view>
+<view class="totalvol">|总成交量:{{item.totalvol}}</view>
+<view class="time">|更新时间:{{item.time}}</view>
+<view class='dLine'>--------------------------------</view>
+</view>
+</block>
+ 

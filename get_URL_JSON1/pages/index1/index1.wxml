@@ -1,0 +1,19 @@
+<!--pages/index1/index1.wxml-->
+
+<text class="title">窗帘设备数据</text>
+<block wx:for="{{CurtainsData}}" wx:key="this">
+<view class="gold">
+<view class="variety">|序号:{{index+1}}</view>
+<view class="variety">|设备id:{{item.deviceId}}</view>
+<view class="latestpri">|MAC:{{item.deviceMac}}</view>
+<view class="openpri">|wifimac:{{item.wifiMac}}</view>
+<view class="maxpri">|设备类型:{{item.deviceType}}</view>
+<view wx:if="{{item.connectionState>0}}">|连接状态 :<text class="online">在线 </text> </view>
+<view wx:elif="{{item.connectionState<1}}"> 连接状态 :<text class="outline">离线 </text> </view>
+<view class="limit">|手机:{{item.phone}}</view>
+<view class="yespri">|型号:{{item.brandMode}}</view>
+<view class="totalvol">|方向:{{item.reversing}}</view>
+<view class="time">|百分比:{{item.percentage}}</view>
+<view class='dLine'>--------------------------------</view>
+</view>
+</block>

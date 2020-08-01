@@ -1,0 +1,10 @@
+ <!-- 分页组件 -->
+    <view class="page_div">
+      <view class="page_sum">共{{pagetotal}}页</view>
+      <view class="page_prev" bindtap="prevFn">上一页</view>
+      <view class="page_number_div">
+        <input value="{{pageNumber}}" bindinput="inputValue" data-name="pageNumber"></input>
+        <view class="pageGo" bindtap="pageGo">Go</view>
+      </view>
+      <view class="page_next" bindtap="nextFn">下一页</view>
+    </view>
