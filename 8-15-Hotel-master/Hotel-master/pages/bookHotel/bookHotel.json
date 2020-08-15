@@ -1,0 +1,9 @@
+{
+     "navigationBarTitleText": "客房预订",
+     "backgroundColor": "#ffffff",
+     "component": true,
+     "usingComponents": {
+          "clearInput": "../../components/clearInput/clearInput",
+          "Select": "../../components/selctDiscount/selctDiscount"
+     }
+}
