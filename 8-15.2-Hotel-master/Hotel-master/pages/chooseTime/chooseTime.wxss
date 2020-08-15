@@ -1,0 +1,228 @@
+/* pages/chooseTime/chooseTime.wxss */
+/**确认按钮**/
+.submit {
+  width: 100%;
+
+  background: white;
+  position: fixed;
+  bottom: 0;
+  
+  height: auto;
+  
+}
+
+.sub-btn {
+  height:auto;
+  border-radius: 10rpx;
+  background: orange;
+  color: white;
+  
+
+}
+
+.content {
+  z-index: 999;
+}
+
+/**不能预订**/
+
+/* 入住离开时间的color */
+.bg-orange {
+  background-color: #ff9645;
+  font-size: 18rpx;
+}
+
+.bg-higlt-orange {
+  background-color: #ffefe3;
+}
+
+/* 节假日的日期样式 */
+.is-festival {
+  font-size: 18rpx;
+  color: orange;
+}
+
+/** 非节假日的日期样式**/
+.not-festival {
+  font-size: 18rpx;
+  color: white;
+}
+
+/***入住离开时间的日历样式*/
+
+.not-sub {
+  color: #222222;
+  background: #dddddd;
+}
+
+.select-out-item {
+  background: #ffffff;
+}
+
+.select-style {
+  color: white;
+  font-size: 20rpx;
+  padding-top: 4rpx;
+}
+
+.time-out {
+  text-decoration: line-through;
+  color: #c0c0c0;
+}
+
+/**
+   * 点击日期的样式
+   */
+.bg {
+  background: orange;
+}
+
+/**
+   * 日期部分
+   */
+.section {
+  width: 100%;
+  padding-bottom: 150rpx;
+  height: auto;
+  padding-top: 420rpx;
+  background-color: #ffffff;
+}
+
+.section > .item > .year {
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.section > .item > .day {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.section > .item > .day > .day-list {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  min-height: 100rpx;
+  max-height: 180rpx;
+  display: flex;
+  font-size: 28rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/**
+   * 头部固定
+   */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+background: white;
+}
+
+.bar {
+  width: 100%;
+  height: var(--status-bar-height);
+  background: #222222;
+}
+
+/**
+   * 关闭清空
+   */
+.set {
+  height: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
+   * 入住离开时间
+   */
+.in-and-out {
+  height: 210rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/**
+   * 入住离开的view
+   */
+.in-and-out > .item {
+  display: flex;
+  flex-direction: column;
+  height: 100rpx;
+}
+
+/**
+   * 未选择入离时间时的文字样式
+   */
+.in-and-out > .text {
+  margin-top: 100rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+  color: #c0c0c0;
+}
+
+/**
+   * 一共选择了多少晚的样式
+   */
+.in-and-out > .item > .count-border {
+  width: 200rpx;
+  font-size: 28rpx;
+  height: 40rpx;
+  margin-top: 48rpx;
+  text-align: center;
+}
+
+.gray {
+  color: #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.orange {
+  color: orange;
+  border-bottom: 1px solid orange;
+}
+
+/**
+   * 共多少晚
+   */
+.in-and-out > .item > .count-border > .count {
+  font-size: 10px;
+}
+
+/**
+   * 周一到周日
+   */
+.week {
+  border-bottom: 1px solid #dcdcdc;
+  border-top: 1px solid #dcdcdc;
+  height: 70rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 26rpx;
+  background: white;
+}
+
+.isa {
+  color: red;
+}
+
+.isa2 {
+  color: red;
+}
