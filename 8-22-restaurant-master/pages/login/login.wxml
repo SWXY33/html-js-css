@@ -1,0 +1,38 @@
+<view wx:if="{{isHide}}">
+ <view wx:if="{{canIUse}}" >
+  <view class='header'>
+   <image src='../../res/img/weixin.png'></image>
+  </view>
+ 
+  <view class='content'>
+  <image src="../../res/img/logo_name.png"></image>
+   <view>申请获取以下权限</view>
+   <text>获得你的公开信息(昵称，头像等)</text>
+  </view>
+ 
+  <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+   授权登录
+  </button>
+ </view>
+ <view wx:else>请升级微信版本</view>
+</view>
+ 
+<view wx:else>
+ <view>
+ <view class="headInf">
+ <image src='{{userHead}}' class='userHead' mode='aspectFill' bindtap='previewHead' />
+ <text class='userTitle'>{{welcome}}{{userName}}，{{time}}好
+ </text>
+ </view>
+ <view class="time">登录时间：{{curentdate}}</view>
+ <view class='location'>
+ <text class='caption' bindtap='getLocalLocation'>当前城市：</text>
+ <image src='../../res/img/ic_city_location.png' mode='widthFix' class='icon' bindtap="getLocation"/>
+ <text class='city' bindtap='selectCity'>{{location}}</text>
+ 
+<view class="address">
+ <image src="../../res/img/address.png" bindtap="getLocation"></image>
+</view>
+ </view>
+ </view>
+</view>
