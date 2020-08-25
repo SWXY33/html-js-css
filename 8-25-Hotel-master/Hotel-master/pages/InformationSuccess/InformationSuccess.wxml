@@ -1,0 +1,4 @@
+身份证信息：
+<view wx:for="{{Information}}">
+{{index}}-----{{item.words}}
+</view>
