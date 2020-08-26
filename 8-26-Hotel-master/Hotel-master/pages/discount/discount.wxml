@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="coupon-list">
+    <!-- 第一个 -->
+    <view class="sawtooth-bor item">
+      <view class="pt10 discount">
+        <text class="fs36">50元</text>
+        <view class="fs12">满300使用</view>
+        <view class="fs12">有效期2020.08.05-2020.08.31</view>
+      </view>
+      <view class="textc receive">使用</view>
+    </view>
+    <!-- 第二个 -->
+    <view class="wrapper">
+    <view class="left">
+    <text class="fs37">10元</text>
+    <view>
+        <text class="fs13">满100使用</text>
+        <text class="fs13">有效期2020.08.05-2020.08.31</text>
+    </view>
+    </view>
+    <view class="right">
+    <text class="use" bindtap="useDiscount">使用</text>
+    </view>
+    </view>
+  </view>
+</view>
