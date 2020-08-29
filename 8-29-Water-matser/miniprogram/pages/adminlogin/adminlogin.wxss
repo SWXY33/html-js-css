@@ -1,0 +1,63 @@
+/* pages/login2/login2.wxss */
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+ }
+  
+ .userHead {
+   width: 100rpx;
+   height: 100rpx;
+   margin: 20rpx;
+   border-radius: 50%;
+ }
+ .time{
+   margin-left: 10rpx;
+   margin-top: 20rpx;
+ }
+ .userTitle {
+   line-height: 100rpx;
+   margin-left: 20rpx;
+   font-size: 40rpx;
+   font-weight: bold;
+   color: rgb(3, 3, 3);
+ 
+ }
+ .caption{
+   margin-left: 10rpx;  
+ margin-top: 20rpx;
+ }
+ .headInf{
+   background-color: #e0a149;
+   border: 1px solid #3f2706;
+   background-image: -o-linear-gradient(bottom, #e0a149 0%, #58401f 100%);
+   background-image: -moz-linear-gradient(bottom, #e0a149 0%, #58401f 100%);
+   background-image: -webkit-linear-gradient(bottom, #e0a149 0%, #58401f 100%);
+   background-image: -ms-linear-gradient(bottom, #e0a149 0%, #58401f 100%);
+   background-image: linear-gradient(to bottom, #e0a149 0%, #58401f 100%);
+   -webkit-box-shadow: inset 0 1px 0 #e0a149;
+   -moz-box-shadow: inset 0 1px 0 #e0a149;
+   box-shadow: inset 0 1px 0 #e0a149;
+   text-shadow: 0 1px 0 #e0a149;
+   padding: 20rpx 40rpx;
+   -webkit-transition: all 0.6s ease-in-out;
+   transition: all 0.6s ease-in-out;
+ }
+
+ .content {
+ 
+  margin-bottom: 90rpx;
+ }
+ .content image{
+   border-radius: 50%;
+   margin-left: 2%;
+   width: 100rpx;
+   height: 100rpx;
+ }
+ .content text {
+  color: #080808;
+ }
+  
