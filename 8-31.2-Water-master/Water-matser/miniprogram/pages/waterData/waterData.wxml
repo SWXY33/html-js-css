@@ -1,0 +1,12 @@
+<!--pages/home/home.wxml-->
+
+<view wx:for="{{waterData}}" wx:index="index" wx:key="key" >
+{{index}}-----{{item.user_id}}
+<view>{{item.username}}</view>
+<view>{{item.headimg}}</view>
+<view>{{item.phone}}</view>
+<view>{{item.openid}}</view>
+<view>{{item.loginTime}}</view>
+<view>{{item.address}}</view>
+<view>{{item.realname}}</view>
+</view>

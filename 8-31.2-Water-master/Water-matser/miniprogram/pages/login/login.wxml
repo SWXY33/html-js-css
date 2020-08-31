@@ -1,0 +1,38 @@
+<view wx:if="{{isHide}}">
+ <view wx:if="{{canIUse}}" >
+  <view class='header'>
+   <image src='../../images/weixin.png'></image>
+  </view>
+ 
+  <view class='content'>
+  <image src="../../images/Logo1.png"></image>
+   <view>申请获取以下权限</view>
+   <text>获得你的公开信息(昵称，头像等)</text>
+  </view>
+ 
+  <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+   授权登录
+  </button>
+ </view>
+ <view wx:else>请升级微信版本</view>
+</view>
+ 
+<view wx:else>
+ <view>
+ <view class="headInf">
+ <image src='{{userHead}}' class='userHead' mode='aspectFill' bindtap='previewHead' />
+ <text class='userTitle'>{{welcome}}{{userName}}，您好
+ </text>
+ </view>
+ <view>
+<button class="bottom"  type='primary' bindtap="bindUser">绑定用户</button>
+<button class="bottom" type='primary' bindtap="queryWater">查询用水情况</button>
+</view>
+<modal hidden="{{hiddenmodalput}}" title="查询用户用水情况" confirm-text="查询"  data-username="{{inputName}}" bindconfirm="query">
+
+    <input type='text'placeholder="请输入用户名" bindinput="getInput" value= "{{inputName}}" auto-focus/>
+
+</modal>
+
+ </view>
+</view>
