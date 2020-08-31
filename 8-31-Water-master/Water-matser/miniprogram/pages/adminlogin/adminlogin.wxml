@@ -1,0 +1,14 @@
+
+ 
+  <view class='content'>
+
+
+ <view>
+ <view class="headInf">
+ <image src='{{userHead}}' class='userHead' mode='aspectFill' />
+ <text class='userTitle'>当前管理员：{{userName}}
+ </text>
+ </view>
+ 
+ </view>
+</view>
