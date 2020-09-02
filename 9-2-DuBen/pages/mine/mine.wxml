@@ -1,0 +1,13 @@
+<!--pages/mine/mine.wxml-->
+<view class="head">
+<text>头像</text><image src="../../img/weixin.jpg"></image>
+</view>
+<view class="head">
+<text>姓名</text><view class="name">张三</view>
+</view>
+<view class="head">
+<text>电话</text><view class="phone">12345678901</view>
+</view>
+<view class="changeUser">
+切换账号
+</view>

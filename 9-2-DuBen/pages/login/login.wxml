@@ -1,0 +1,45 @@
+<!--pages/login/login.wxml-->
+<view class="container" style="background-image: url(../../img/background.jpg); background-size:100% 100%;background-repeat:no-repeat;">
+
+<view class="logo">
+<image src="../../img/LOGO.png"></image>
+</view>
+
+<view class="login">
+<view class="loginByPhone" bindtap="loginByPhone" >手机号一键登录</view>
+
+<view class="loginByOtherPhone" bindtap="loginByOtherPhone" data-statu="open">其他手机号登录</view>
+</view>
+
+<view class="footer">
+<view style="text-align:center"><image open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" src="../../img/1230528.png"></image>
+</view>
+<view class="foot-text">若您的手机号未注册，将为您自动注册。注册或登录即代表您同意我们的 <text style="text-decoration: underline">服务协议</text> 和 <text style="text-decoration: underline">隐私政策 </text>
+</view>
+</view>
+
+<!--mask-->
+<view class="drawer_screen" bindtap="loginByOtherPhone" data-statu="rightclose" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+  <!--drawer content-->
+  <view class="drawer_title">短信验证登录<text class="close" bindtap="loginByPhone" data-statu="rightclose">X</text></view>
+  <view class="drawer_content">
+    <view class="top grid">
+      <label class="title col-0">手机号</label>
+      <input class="input_base input_h30 col-1" name="rName" placeholder="请输入手机号"></input>
+    </view>
+    <view class="top grid">
+      <label class="title col-0">验证码</label>
+      <input class="input_base input_h30 col-1" name="mobile" placeholder="短信动态码"></input>
+      <view class='codeBtn' style="color:{{color}};pointer-events: {{pointer}};" bindtap='getCode' hidden='{{hidden}}'>{{btnValue}}</view>
+    </view>
+   
+
+  </view>
+  <view class="btn_ok" bindtap="loginByPhone" data-statu="close">登录</view>
+</view>
+
+</view>

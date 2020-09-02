@@ -1,0 +1,194 @@
+/* pages/login/login.wxss */
+
+
+.container{
+  height: 100%;
+  width:100%;
+  position: fixed;/*生成固定定位的元素，相对于浏览器窗口进行定位。*/
+}
+.logo{
+  width: 100%;
+  height: 200rpx;
+}
+.logo image{
+  width: 33%;
+  margin-left: 33%;
+  height: 120rpx;
+}
+
+.login{
+  width: 100%;
+  height: 300rpx;
+  margin-top: 100rpx;
+}
+
+.loginByPhone{
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  font-size: medium;
+  width: 70%;
+  height: 80rpx;
+  border-radius: 10rpx;
+  margin-left: 15%;
+  background-color:#2785E7;
+}
+.loginByOtherPhone{
+  width: 100%;
+  margin-top: 50rpx;
+  color: #fff;
+  text-align: center;
+}
+.footer{
+  margin-top: 200rpx;
+}
+.footer image{ 
+  width: 110rpx;
+  height: 100rpx;
+}
+.foot-text{
+  margin-left: 15%;
+  width: 70%;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  margin-top: 20rpx;
+}
+/* 弹框 */
+
+/*mask*/
+.close{
+  float: right;
+}
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: #fafafa;
+  border-radius: 10px 10px 0 0;
+}
+
+.drawer_title {
+  padding: 15px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+}
+
+.drawer_content {
+  height: 210px;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+
+.btn_ok {
+  margin-left:10% ;
+  width: 80%;
+  margin-bottom: 100rpx;
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  background-color: #2785E7;
+  border-top: 1px solid#2785E7;
+  border-radius: 10rpx;
+  color: #ffffff;
+}
+
+.top {
+  padding-top: 8px;
+}
+
+.bottom {
+  padding-bottom: 8px;
+}
+
+.title {
+  height: 50px;
+  line-height: 30px;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+  font: 300 28rpx/30px "microsoft yahei";
+}
+
+.input_base {
+  border: 2rpx solid #ccc;
+  padding-left: 10rpx;
+  margin-right: 50rpx;
+}
+
+.input_h30 {
+  height: 30px;
+  line-height: 30px;
+}
+
+.input_h60 {
+  height: 60px;
+}
+
+.input_view {
+  font: 12px "microsoft yahei";
+  background: #fff;
+  color: #000;
+  line-height: 30px;
+}
+
+input {
+  font: 12px "microsoft yahei";
+  background: #fff;
+  color: #000;
+}
+
+radio {
+  margin-right: 20px;
+}
+
+.grid {
+  display: -webkit-box;
+  display: box;
+}
+
+.col-0 {
+  -webkit-box-flex: 0;
+  box-flex: 0;
+}
+
+.col-1 {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.codeBtn{
+  position: absolute;
+  right: 7%;
+  top: 32%;
+  width: 200rpx;
+  font-size: 26rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 70rpx;
+  z-index:10
+  }
