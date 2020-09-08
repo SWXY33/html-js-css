@@ -1,0 +1,100 @@
+<!--pages/home/home.wxml-->
+<view class="head">
+<image src="/img/home.jpg"></image>
+</view>
+<view class="information">
+<view class="inf-left">
+<view class="ll">
+<text class="name">台山碧桂园凤凰酒店 </text>
+<image class="star" src="/img/star.png"></image>
+<image class="star" src="/img/star.png"></image>
+<image class="star" src="/img/star.png"></image>
+<image class="star" src="/img/star.png"></image>
+<image class="star" src="/img/star.png"></image>
+<text class="t1">休闲度假</text>
+<text class="t1">商务出行</text>
+</view>
+<view class="rr">
+<text class="t2">2008年开业</text>
+<text class="t2"> 2016年装修</text>
+<text class="t2">客房免费WiFi</text>
+<text class="t2">P免费停车场</text>
+</view>
+</view>
+<view class="inf-right"><text class="like">❤</text></view>
+<view class="line"></view>
+<text class="score">4.8分</text>
+<text class="estimate">自助餐</text>
+<text class="estimate">装修豪华</text>
+<text class="estimate">环境优美</text>
+<text class="goodestimate">95%好评</text>
+</view>
+<view class='divideItem'>
+     <text class='divideText'>入住{{startYear}}</text>
+     <text class='divideText'>退房{{endYear}}</text>
+</view>
+
+<!-- 日期计算  -->
+<view class='dateContent'>
+     <view class='dateItem'>
+          <view class='date' data-start1="{{startDay}}" data-start2="{{startWeek}}" data-start3="{{startMonth}}" data-start4="{{startYear}}" data-end1="{{endDay}}" data-end2="{{endWeek}}" data-end3="{{endMonth}}" data-end4="{{endYear}}" data-day="{{day}}" bindtap="chooseTime" data-startline="{{startline}}" data-startindex="{{startindex}}" data-endline="{{endline}}" data-endindex="{{endindex}}">
+               <view class='date'>
+                    <text class='day'>{{startDay}}</text>
+                    <view class='monthWeek'>
+                         <text class='month'>{{startMonth}}月</text>
+                         <text class='week'>{{startWeek}}</text>
+                    </view>
+               </view>
+          </view>
+          <view class='horizontalLine' style='width:60rpx;position:absolute;right:0;'></view>
+     </view>
+     <text class='dayCount'>{{dayCount}}天</text>
+     <view class='dateItem'>
+          <view class='horizontalLine' style='width:60rpx;position:absolute;'></view>
+          <view class='date' data-start1="{{startDay}}" data-start2="{{startWeek}}" data-start3="{{startDay}}"  data-start4="{{startYear}}" data-end1="{{endDay}}" data-end2="{{endWeek}}" data-end3="{{endMonth}}" data-end4="{{endYear}}" data-day="{{day}}" bindtap="chooseTime" data-startline="{{startline}}" data-startindex="{{startindex}}" data-endline="{{endline}}" data-endindex="{{endindex}}">
+               <view class='date'>
+                    <text class='day'>{{endDay}}</text>
+                    <view class='monthWeek'>
+                         <text class='month'>{{endMonth}}月</text>
+                         <text class='week'>{{endWeek}}</text>
+                    </view>
+               </view>
+          </view>
+     </view>
+</view>
+<!-- 日期end  -->
+<view>
+
+
+<view class="room" catchtap='rotateAnim'> 
+<view class="r1"><image class="roomimg" src="../../img/room.jpg"></image></view>
+<view class="r2">
+<text class="roomname">度假阳台双床房 ></text>
+</view>
+<view class="r2">
+<text class="roominf">无餐食</text>
+<text class="roominf">双床</text>
+<text class="roominf">2人</text>
+<text class="roominf">46㎡</text>
+<text class="roominf">2-3层</text>
+</view>
+<view class="r2">
+<image class="logoimg" src="../../img/LOGO.png"></image>
+<text class="tt">全套度本智能设备</text>
+</view>
+<view class="r3">
+<text class="price">￥338</text>
+</view>
+<view style='transform:rotate({{degs}}deg);transition:all 0.4s;'></view>
+</view>
+<view hidden='{{degs==0}}' class="roomtype">
+  <block>
+      <view class="type">无餐食 双床 2人 ></view>
+      <view class="inf">(休闲假期) </view>
+      <view class="free">免费取消</view>
+      <view class="smoke">可吸烟</view>
+      <view class="buy"><text class="buy1">订</text><text class="buy2">到店付</text></view>
+       <view class="dprice">￥338</view>
+  </block>
+</view>
+</view>
