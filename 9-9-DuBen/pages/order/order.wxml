@@ -1,0 +1,24 @@
+<!--pages/order/order.wxml-->
+
+<view class="roomInf"> 
+<view class="roomName"><text class="name">度假阳台双床房</text></view>
+<view><text class="r1">入住：09月08日 离店：09月09日 1晚</text></view>
+<view><text class="r1">双床 无餐食</text></view>
+<view class="msg1">订单确认后30分钟内可免费取消</view>
+</view>
+<view class="read"> 
+<view class="r"><image class="gth" src="/img/i6.png"></image><text class="rr">订房必读</text></view>
+<view><text style="margin-left:20rpx;font-weight:bold">·</text>
+<text class="r1">入住时间：14：00以后 离店时间：12：00以前</text></view>
+<view><text style="margin-left:20rpx;font-weight:bold">·</text>
+<text class="r1">该房型允许携带儿童入住</text></view>
+<view><text style="margin-left:20rpx;font-weight:bold">·</text>
+<text class="r1">18岁及以上客人视为成人</text></view>
+</view>
+
+<view class="o3">
+<view class="roomnum"><text class="tn">房间数 </text> 1间</view>
+<view class="roomnum"><text class="tn">住客姓名 </text> 张三</view>
+<view class="roomnum"><text class="tn">大陆手机 </text> 12345678905</view>
+<view class="roomnum"><text class="tn">预计到店 </text> <text style="color:#3db389">预订成功后房间将为您整晚保留</text></view>
+</view>
