@@ -1,0 +1,6 @@
+
+<view class="Top">
+<camera device-position="front" flash="off" binderror="error" class="csscamera"></camera>
+<!-- 拍照按钮 -->
+<button type="primary" bindtap="takePhoto" class="sumbit"> 识别 </button> 
+</view>
