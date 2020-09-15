@@ -1,0 +1,19 @@
+<!--pages/registerSuccess/registerSuccess.wxml-->
+<!--pages/mine/mine.wxml-->
+<view class="head">
+<text>头像</text><image src="{{headimg}}"></image>
+</view>
+<view class="head">
+<text>姓名</text><view class="name">{{nickname}}</view>
+</view>
+<view class="head">
+<text>电话</text><view class="phone">12345678901</view>
+</view>
+<view class="changeUser">
+切换账号
+</view>
+<view class="nav">
+<view class="home"><image src="../../img/home.png" />首页</view>
+<view class="myhouse">我的房间</view>
+<view class="mine">我</view>
+</view>

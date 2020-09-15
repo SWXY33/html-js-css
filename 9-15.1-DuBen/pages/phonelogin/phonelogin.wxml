@@ -1,0 +1,32 @@
+<view wx:if="{{isHide}}">
+ <view wx:if="{{canIUse}}" >
+  <view class='header'>
+   <image src='../../img/weixin.png'></image>
+  </view>
+ 
+  <view class='content'>
+   <view>申请获取以下权限</view>
+   <text>获得你的公开信息(昵称，头像等)</text>
+  </view>
+ 
+  <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+   授权登录
+  </button>
+ </view>
+ <view wx:else>请升级微信版本</view>
+</view>
+ 
+<view wx:else>
+ <view class="head">
+<text>头像</text><image src="{{userHead}}"></image>
+</view>
+<view class="head">
+<text>姓名</text><view class="name">{{userName}}</view>
+</view>
+<view class="head">
+<text>电话</text><view class="phone">12345678901</view>
+</view>
+<view class="changeUser" bindtap="changeUser">
+切换账号
+</view>
+</view>
