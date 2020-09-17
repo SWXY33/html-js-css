@@ -1,0 +1,6 @@
+<!--pages/controlkongtiao/controlkongtiao.wxml-->
+<view class="kongtiao">空调</view>
+<view class="on-off">
+<text  style="margin-left: 5%;">状态：{{status}}</text>
+<switch class="kaiguan" checked="{{isChecked1}}" bindchange="changeSwitch1" />
+</view>

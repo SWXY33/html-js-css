@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/controlkongtiao/controlkongtiao",
+    "pages/controTV/controlTV",
+    "pages/controllight/controllight",
+    "pages/controlmyroom/controlmyroom",
+    "pages/myroom/myroom",
+    "pages/login/login",
+    "pages/registerSuccess/registerSuccess",
+    "pages/mine/mine",
+    "pages/home/home",
+    "pages/order/order",
+    "pages/phonelogin/phonelogin",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/chooseTime/chooseTime",
+    "pages/testFace/testFace",
+    "pages/verifyFace/verifyFace",
+ 
+    "pages/varifySuccess/varifySuccess",
+    "pages/InformationSuccess/InformationSuccess"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#2785E7",
+    "borderStyle": "black" ,
+    "list": [{
+      "selectedIconPath": "/img/home_press.png",
+      "iconPath": "/img/home.png",
+      "pagePath": "pages/home/home",
+      "text": "首页"
+    }, {
+      "selectedIconPath": "/img/category_press.png",
+      "iconPath": "/img/category.png",
+      "pagePath": "pages/myroom/myroom",
+      "text": "我的房间"
+    },{
+      "selectedIconPath": "/img/contact_press.png",
+      "iconPath": "/img/contact.png",
+      "pagePath": "pages/mine/mine",
+      "text": "我"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

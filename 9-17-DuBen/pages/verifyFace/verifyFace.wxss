@@ -1,0 +1,19 @@
+.Top {
+  position: absolute;
+  top: 0rpx;
+  width: 100%;
+  bottom: 100rpx;
+}
+.csscamera {
+  margin: 50rpx 5% 0 5%;
+  padding: 5%;
+  height: 70%;
+  width: 80%;
+  border: dashed 1rpx rgb(185, 185, 189);
+}
+.sumbit {
+  position: absolute;
+  bottom: 0rpx;
+  height: 100rpx;
+  width: 100%;
+}

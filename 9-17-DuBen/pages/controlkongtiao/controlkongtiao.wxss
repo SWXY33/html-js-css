@@ -1,0 +1,28 @@
+/* pages/controlkongtiao/controlkongtiao.wxss */
+.kongtiao{
+  text-align: center;
+  margin-top: 30rpx;
+}
+.kaiguan{
+  margin-top: 20rpx;
+  float: right;
+  margin-right: 5%;
+
+}
+/*swtich整体大小及背景色*/
+.wx-switch-input{
+  width:80rpx !important;
+  height:38rpx !important;
+  background: #2785e7 !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+  width:80rpx !important;
+  height: 38rpx !important;
+}
+/* 中间的小圆球 */
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+  width: 40rpx !important;
+  height: 34rpx !important;
+}
