@@ -1,0 +1,64 @@
+<!--pages/controlmyroom/controlmyroom.wxml-->
+<view class="myroom">
+<view class="head">
+<view class="username">张三，欢迎入住</view>
+<view class="roomInf"><text>台山碧桂园凤凰酒店</text> 2031房</view>
+<view class="logo"><image class="dubenlogo" src="../../img/LOGO.png"></image></view>
+</view>
+<view class="lamp">
+<view class="ltitle"><image class="l" src="../../img/1193965.png"></image><view class="t1">室内灯光</view></view>
+<view class="i1">
+<view class="item1">
+<image class="light1" src="../../img/1179254.png"></image></view>
+门口灯
+</view>
+<view class="i1">
+<view class="item2">
+<image class="light1" src="../../img/1179254.png"></image></view>
+床头灯
+</view>
+<view class="i1">
+<view class="item3">
+<image class="light1" src="../../img/1179254.png"></image></view>
+台灯
+</view>
+<view class="i1">
+<view class="item4">
+<image class="light1" src="../../img/1179254.png"></image></view>
+大灯
+</view>
+<view class="i1">
+<view class="item5">
+<image class="light1" src="../../img/1179254.png"></image></view>
+卫生间
+</view>
+</view>
+<view class="lamp">
+<view class="ltitle"><image class="l" src="../../img/category1.png"></image><view class="t1">智能设备</view></view>
+<view class="i1">
+<view class="item1" bindtap="controlTV">
+<image class="light4" src="../../img/1160229.png"></image></view>
+电视
+</view>
+<view class="i1">
+<view class="item2" bindtap="controlreshuiqi">
+<image class="light4" src="../../img/1234381.png"></image></view>
+热水器
+</view>
+<view class="i1">
+<view class="item3" bindtap="controlxinfeng">
+<image class="light4" src="../../img/1219635.png"></image></view>
+新风系统
+</view>
+<view class="i1">
+<view class="item4" bindtap="controlkongtiao">
+<image class="light4" src="../../img/1194978.png"></image></view>
+空调
+</view>
+<view class="i1">
+<view class="item5" bindtap="controlCurtain">
+<image class="light4" src="../../img/1189390.png"></image></view>
+窗帘
+</view>
+</view>
+</view>

@@ -1,0 +1,33 @@
+/* pages/mine/mine.wxss */
+.head{
+  height: 170rpx;
+  line-height: 170rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.head text{
+  margin-left: 30rpx;
+}
+.head image{
+  margin: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+  border-radius: 5rpx;
+}
+.name{
+  line-height: 170rpx;
+  float: right;
+  margin-right: 30rpx;
+}
+.phone{
+  line-height: 170rpx;
+  float: right;
+  margin-right: 30rpx;
+}
+.changeUser{
+  height: 150rpx;
+  border-top: 130rpx solid rgb(230, 228, 228);
+  text-align: center;
+  border-bottom: 1rpx solid #ccc;
+  line-height: 150rpx;
+}

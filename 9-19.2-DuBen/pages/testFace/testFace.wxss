@@ -1,0 +1,4 @@
+/* pages/testFace/testFace.wxss */
+.loginByrenlian{
+margin-top: 50rpx;
+}
