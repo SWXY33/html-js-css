@@ -1,0 +1,41 @@
+<!--pages/controlkongtiao/controlkongtiao.wxml-->
+<view class="kongtiao">空调</view>
+<view class="on-off">
+<view  style="margin-left: 5%;width:70%;float:left;">{{status}}</view>
+<view style="width:20%;float:right;margin-right:5%;"><switch class="kaiguan" checked="{{isChecked1}}" bindchange="changeSwitch1" /></view>
+</view>
+<view class="show">
+<view class="temperature">
+<view class="number">{{temperature}}℃</view>
+<view class="xuehuaimg"><image class="xuehua" src="/img/508116.png"></image></view>
+</view></view>
+
+<view class="controltemperature">
+<view class="add" bindtap="addtemperature">+</view>
+<view class="sub" bindtap="subtemperature">—</view>
+</view>
+
+<view class="model">
+<view class="modelcontrol"><view class="cold"><image class="img" src="/img/508116.png"></image></view>
+<view class="coldtext">制冷</view></view>
+<view class="modelcontrol"><view class="warm"><image class="img" src="/img/1194839.png"></image></view><view class="warmtext">制热</view></view>
+<view class="modelcontrol"><view class="auto"><image class="img" src="/img/1168287.png"></image></view><view class="autotext">自动</view></view>
+</view>
+
+<view class="speed">
+<view class="wind-speed"><image class="w-img" src="/img/566982.png"></image></view>
+<view class="w-text">风速</view>
+
+<view class='slider'>
+<slider bindchange='sliderChange' activeColor='#2785e7' block-size="12" value='50' />
+<view class="small">小</view>
+<view class="big">大</view>
+</view>
+</view>
+
+<view class="timer">
+<view class="wind-speed"><image class="w-img" src="/img/1179302.png"></image></view>
+<view class="w-text">定时</view>
+
+<view class="setTime"><input class="i-text"></input> <view style="margin:0rpx 30rpx;float:left"> 时 </view> <input class="i-text"></input> <view style="margin:0rpx 30rpx;float:left"> 分 </view></view>
+</view>
