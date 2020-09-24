@@ -1,0 +1,157 @@
+/* pages/controlxinfeng/controlxinfeng.wxss */
+/* pages/controlreshuiqi/controlreshuiqi.wxss */
+.kongtiao{
+  text-align: center;
+  margin-top: 20rpx;
+}
+.kaiguan{
+  float: right;
+  margin-right: 5%;
+
+}
+.kaiguan-warm{
+  float: right;
+  margin-right: 5%;
+
+}
+/*swtich整体大小及背景色*/
+.wx-switch-input{
+  width:80rpx !important;
+  height:38rpx !important;
+
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+  width:80rpx !important;
+  height: 38rpx !important;
+
+}
+/* 中间的小圆球 */
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+
+  width: 40rpx !important;
+  height: 34rpx !important;
+}
+
+
+.show{
+  margin-top: 200rpx;
+width: 100%;
+height: 400rpx;
+text-align: center;
+}
+.temperature{
+  margin-left: 25%;
+  text-align: center;
+  line-height: 400rpx;
+  font-size: 140rpx;
+  color: #48eda9;
+  width: 50%;
+  border-radius: 50%;
+  height: 400rpx;
+  border: 2rpx solid #48eda9;
+}
+.temperature-warm{
+  margin-left: 25%;
+  text-align: center;
+  line-height: 400rpx;
+  font-size: 140rpx;
+  color: #48eda9;
+  width: 50%;
+  border-radius: 50%;
+  height: 400rpx;
+  border: 2rpx solid #48eda9;
+}
+.number{
+  width: 100%;
+  height: 270rpx;
+  float: left;
+}
+.xuehuaimg{
+  text-align: center;
+  float: left;
+  width: 100%;
+  height: 130rpx;
+
+}
+.xuehua{
+  float: left;
+  margin-top: 30rpx;
+  margin-left: 43%;
+  width: 60rpx;
+  height: 60rpx;
+
+}
+
+.model{
+  margin-top: 100rpx;
+  width: 100%;
+  height: 150rpx;
+  padding: 5rpx 5%;
+}
+.modelcontrol{
+  float: left;
+  width: 30%;
+  height: 150rpx;
+
+}
+.cold{
+  margin-left: 28%;
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  border: 1rpx solid #48eda9;
+  border-radius: 50%;
+  text-align: center;
+}
+.img{
+  margin-top: 15rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.coldtext{
+  float: left;
+  width: 100%;
+  margin-top: 10rpx;
+  height: 40rpx;
+  color:#48eda9;
+  font-size: 22rpx;
+  text-align: center;
+}
+.warm{
+  margin-left: 28%;
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  border: 1rpx solid #48eda9;
+  border-radius: 50%;
+  text-align: center;
+}
+.warmtext{
+  float: left;
+  width: 100%;
+  margin-top: 10rpx;
+  height: 40rpx;
+  color:#48eda9;
+  font-size: 22rpx;
+  text-align: center;
+}
+.auto{
+  margin-left: 28%;
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  border: 1rpx solid #48eda9;
+  border-radius: 50%;
+  text-align: center;
+}
+.autotext{
+  float: left;
+  width: 100%;
+  margin-top: 10rpx;
+  height: 40rpx;
+  color:#48eda9;
+  font-size: 22rpx;
+  text-align: center;
+}

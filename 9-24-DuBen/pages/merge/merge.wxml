@@ -1,0 +1,27 @@
+
+
+<view class="box">
+      <view class="title">
+          核验身份信息
+      </view>
+      <view class="warn">*请输入身份信息</view>
+      <view class='info'> 
+          <view class="colum">      
+              <text decode="{{true}}" class="list">姓&emsp;&emsp;名：</text>
+              <input class="input" bindblur='name' value="" ></input>       
+          </view>
+          <image src='../../img/success.png' wx:if="{{allow_name}}" class="image">允许</image>
+          <image wx:if="{{errorname}}" src='../../img/error.png'  class="image">允许</image>
+      </view>
+      <view class='info' style='margin-top:100rpx;'> 
+          <view class="colum">
+              <view class='list'>身份证号：</view>
+              <input class='input' bindblur='id' value="" ></input>
+          </view>
+          <image src='../../img/success.png' wx:if="{{allow_id}}" class="image">允许</image>
+          <image src='../../img/error.png' wx:if="{{error}}" class="image">允许</image>
+      </view>
+
+   </view>   
+
+
