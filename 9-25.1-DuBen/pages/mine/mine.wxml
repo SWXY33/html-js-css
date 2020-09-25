@@ -1,0 +1,15 @@
+<!--pages/mine/mine.wxml-->
+<view class="head">
+<text>头像</text>
+<image wx:if="{{renlianimg}}" src="{{renlianimg}}"></image>
+<image wx:else src="{{headimg}}"></image>
+</view>
+<view class="head">
+<text>姓名</text><view class="name">{{nickname}}</view>
+</view>
+<view class="head">
+<text>电话</text><view class="phone">12345678901</view>
+</view>
+<view class="changeUser" bindtap="changeUser">
+切换账号
+</view>

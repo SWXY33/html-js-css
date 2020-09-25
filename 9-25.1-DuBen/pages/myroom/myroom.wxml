@@ -1,0 +1,10 @@
+<!--pages/myhouse/myhouse.wxml-->
+
+<view class="myroom" bindtap="myroom">
+<view class="left"><image class="roomimg" src="../../img/room.jpg"></image></view>
+<view class="center">
+<view class="hotelname">台山碧桂园凤凰酒店</view>
+<view class="roomname">度假阳台双床房</view>
+</view>
+<view class="right">已入住</view>
+</view>
