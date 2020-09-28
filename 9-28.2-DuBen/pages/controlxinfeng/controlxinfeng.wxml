@@ -1,0 +1,21 @@
+
+<view class="kongtiao">新风系统</view>
+<view class="on-off">
+<view  style="margin-left: 5%;width:70%;float:left;">{{status}}</view>
+<view style="width:20%;float:right;margin-right:5%;"><switch class="kaiguan" color="#48eda9" checked="{{isChecked1}}" bindchange="changeSwitch1" /></view>
+</view>
+<view class="show">
+<view class="temperature">
+<view class="number">{{model}}</view>
+<view class="xuehuaimg"><image class="xuehua" src="{{src}}"></image></view>
+</view></view>
+
+<view class="model">
+<view class="modelcontrol">
+<view class="cold" bindtap="modelcontrol" data-state="1"><image class="img" src="/img/1157960.png"></image></view>
+<view class="coldtext">清新</view></view>
+<view class="modelcontrol">
+<view class="warm" bindtap="modelcontrol" data-state="2"><image class="img" src="/img/566982h.png"></image></view><view class="warmtext">换气</view></view>
+<view class="modelcontrol">
+<view class="auto" bindtap="modelcontrol" data-state="3"><image class="img" src="/img/1168287.png"></image></view><view class="autotext">自动</view></view>
+</view>
