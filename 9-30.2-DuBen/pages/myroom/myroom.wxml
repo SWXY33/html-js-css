@@ -1,0 +1,15 @@
+<!--pages/myhouse/myhouse.wxml-->
+
+<view wx:if="{{orderState}}" class="myroom" bindtap="myroom">
+<view class="left"><image class="roomimg" src="../../img/room.jpg"></image></view>
+<view class="center">
+<view class="hotelname">{{hotelName}}</view>
+<view class="roomname">{{roomName}}</view>
+</view>
+<view class="orderNumber">订单号：{{orderNumber}}</view>
+<view class="right">待入住</view>
+</view>
+
+<view wx:else class="no_order">
+  尚未有您的订单信息，快去预订吧
+</view>
