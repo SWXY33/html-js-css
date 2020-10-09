@@ -1,0 +1,54 @@
+/* pages/myhouse/myhouse.wxss */
+.no_order{
+  margin-top: 50rpx;
+  color: #ccc;
+  text-align: center;
+}
+.myroom{
+  width: 95%;
+  margin-left: 2%;
+  height: 190rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+}
+.left{
+  float: left;
+  width: 33%;
+  height: 190rpx;
+
+}
+.roomimg{
+  width: 90%;
+  height: 170rpx;
+  margin: 10rpx;
+}
+.center{
+  padding: 0rpx 3%;
+  float: left;
+  width: 60%;
+  height: 150rpx;
+
+}
+.hotelname{
+margin-top: 10rpx;
+}
+.roomname{
+  margin-top: 10rpx;
+  color: rgb(134, 134, 134);
+}
+.orderNumber{
+  font-size: 20rpx;
+  text-align: left;
+  line-height: 40rpx;
+  float: left;
+  width: 47%;
+  height: 40rpx;
+}
+.right{
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+  float: right;
+  width: 18%;
+  height: 40rpx;
+}
