@@ -1,0 +1,26 @@
+<!--pages/controllight/controllight.wxml-->
+<view class="TVPage">
+<view class="head">
+<image class="lightimg" src="/img/1179254.png"></image> 
+<view class="lightname">{{lightname}}</view>
+</view>
+<view class="on-off"> 
+<view wx:if="{{noclick}}" class="active" bindtap="click_off">关</view>
+<view wx:if="{{click}}" class="switch" bindtap="click_off">关</view>
+<view wx:if="{{click}}" class="active" bindtap="click_on">开</view>
+<view wx:if="{{noclick}}" class="switch" bindtap="click_on">开</view>
+</view>
+<view class='slider'>
+  <view class="control">亮度调节</view>
+<slider bindchange='sliderChange' activeColor='#2785e7' block-size="12" value='50' />
+<view class="small">暗</view>
+<view class="big">亮</view>
+</view>
+
+<view class="timer">
+<view class="wind-speed"><image class="w-img" src="/img/1179302.png"></image></view>
+<view class="w-text" style="color:#2785e7">定时</view>
+
+<view class="setTime"><input class="i-text" type="number" style="text-align:center;border-bottom: 1rpx solid #2785e7;"></input> <view style="margin:0rpx 30rpx;float:left;color:#2785e7"> 时 </view> <input type="number" class="i-text" style="text-align:center;border-bottom: 1rpx solid #2785e7;"></input> <view style="margin:0rpx 30rpx;float:left;color:#2785e7"> 分 </view></view>
+</view>
+</view>
