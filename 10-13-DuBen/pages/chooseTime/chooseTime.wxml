@@ -1,0 +1,92 @@
+<view class="content">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="in-and-out">
+      <block wx:if="{{start.length>0}}">
+        <view class="item">
+          <view style="font-size:30rpx;color:#C0C0C0;">入住日期</view>
+          <view style="font-weight:bold;margin-top:10rpx;font-size:36rpx;">{{startDay}}</view>
+          <view style="font-size:24rpx;margin-top:10rpx;margin-left:30rpx;">{{startWeek}}</view>
+        </view>
+      </block>
+      <block wx:if="{{start.length==0}}">
+        <view class="item text">
+          <view>入住日期</view>
+        </view>
+      </block>
+      <view class="item">
+        <view class="count-border {{day==0?'gray':'orange'}}">
+          <view class="count" style="font-size:26rpx;line-height:26rpx;">共{{day}}晚</view>
+        </view>
+      </view>
+      <block wx:if="{{end.length==0}}">
+        <view class="item text">
+          <view>离店日期</view>
+        </view>
+      </block>
+      <block wx:if="{{end.length>0}}">
+        <view class="item">
+          <view style="font-size:30rpx;color:#C0C0C0;">离店日期</view>
+          <view style="font-weight:bold;margin-top:10rpx;font-size:36rpx;">{{endDay}}</view>
+          <view style="font-size:24rpx;margin-top:10rpx;margin-left:30rpx;">{{endWeek}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="week">
+      <view>日</view>
+      <view>一</view>
+      <view>二</view>
+      <view>三</view>
+      <view>四</view>
+      <view>五</view>
+      <view>六</view>
+    </view>
+  </view>
+  
+  <view class="section">
+    <block wx:for="{{date}}" wx:for-item="res" wx:for-index="line" wx:key="key">
+      <view class="item">
+        <view class="year">{{res.year}}年{{res.month}}月</view>
+        <view class="day">
+          <block wx:for="{{res.oneDayWeek}}" wx:for-item="week" wx:key="key">
+            <view class="day-list" style="width:{{(dayWidth-10)/7}}px ;visibility:hidden">{{week}}</view>
+          </block>
+          <block wx:for="{{res.day}}" wx:for-item="item" wx:for-index="index" wx:key="key" wx:for-year="{{res.year}}">
+            <view class="day-list {{line==start[0]&&index==start[1]?'bg-orange select-style':''}} {{line>=start[0]&&line<=end[0]&&index>start[1]&&index<end[1]||line>=start[0]&&index>start[1]&&line<end[0]||line<=end[0]&&index<end[1]&&line>start[0]||line<end[0]&&line>start[0]?'bg-higlt-orange':''}} {{line==0&&index+1<nowDay?'time-out':''}} {{priceStauts.length>0&&priceStauts[line][index]<0&&start.length>0&&end.length>0||priceStauts.length>0&&priceStauts[line][index]<0&&start.length==0&&end.length==0?'not-sub':''}} {{priceStauts.length>0&&end.length==0&&start.length>0&&priceStauts[line][index]<0&&priceStauts[line][index]<0&&line+index!=lastNot[0]+lastNot[1]?'not-sub':''}}" style="width:{{(dayWidth-10)/7}}px;background-color:{{line==end[0]&&index==end[1]?'rgb(69, 144, 241)':''}};color:{{line==end[0]&&index==end[1]?'#FFFFFF':''}}" bindtap="selectDay" data-line="{{line}}" data-index="{{index}}" data-year="{{res.year}}" data-startYear="{{line==start[0]&&index==start[1]}}?{{res.year}}" data-endYear="{{line==end[0]&&index==end[1]}}?{{res.year}}">
+            
+              <block wx:if="{{line==start[0]&&index==start[1]}}">
+                <view class="select-style">入住</view>
+              </block>
+              <block wx:if="{{line==end[0]&&index==end[1]}}">
+                <view class="select-style">离店</view>
+              </block>
+          
+              <view style="padding-top:2px;padding-bottom:2px;">{{item}}</view>
+              <block wx:if="{{priceStauts.length>0}}">
+                <view style="font-size:12px;padding-bottom:3px;">
+                  <block wx:if="{{priceStauts[line][index]>0}}">
+                    <view>￥{{priceStauts[line][index]}}</view>
+                  </block>
+                  <block wx:if="{{priceStauts[line][index]<0}}">
+                    <view>无房</view>
+                  </block>
+                </view>
+              </block>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="submit">
+
+    <button class="sub-btn " disabled="{{!isSub}}" data-start1="{{startDay}}" data-start2="{{startWeek}}" data-end1="{{endDay}}" data-end2="{{endWeek}}" data-day="{{day}}" data-start4="{{startYear}}" data-end4="{{endYear}}" bindtap="subTime" data-startline="{{startline}}" data-startindex="{{startindex}}" data-endline="{{endline}}" data-endindex="{{endindex}}">
+      <block wx:if="{{isSub}}">
+        <text>确定</text>
+      </block>
+      <block wx:if="{{!isSub}}">
+        <text>请选择入住日期</text>
+      </block>
+    </button>
+  </view>
+</view>

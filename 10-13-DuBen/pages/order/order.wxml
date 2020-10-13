@@ -1,0 +1,60 @@
+<!--pages/order/order.wxml-->
+<view class="orderPage">
+<form bindsubmit="formSubmit">
+<view class="roomInf"> 
+<view class="roomName"><text class="name">{{roomName}}</text></view>
+<view><text class="r1">入住：{{startDate}} 离店：{{endDate}} {{day}}晚</text></view>
+<view><text class="r1">双床 无餐食</text></view>
+<view class="msg1">订单确认后30分钟内可免费取消</view>
+</view>
+
+<view class="read"> 
+<view class="r">
+  <icon class="icon-box-img" type="warn" size="20"></icon>
+  <text class="rr"> 订房必读</text></view>
+<view><text style="margin-left:20rpx;font-weight:bold">·</text>
+<text class="r1">入住时间：14：00以后 离店时间：12：00以前</text></view>
+<view><text style="margin-left:20rpx;font-weight:bold">·</text>
+<text class="r1">该房型允许携带儿童入住</text></view>
+<view><text style="margin-left:20rpx;font-weight:bold">·</text>
+<text class="r1">18岁及以上客人视为成人</text></view>
+</view>
+
+<view class="o3">
+<view class="roomnum"><view class="tn">房间数 </view> <view class="tn1">一间 </view></view>
+<view class="roomnum"><view class="tn">住客姓名 </view> <view class="tn1"><input class="inputname" bindblur="name" type="text" value="{{idname}}" name="username"/> </view></view>
+
+<view class='top'>
+  <view class='top-text'> {{areaName}}</view>
+  <!-- 下拉框 -->
+  <view class='top-selected' bindtap='bindShowMsg'>
+    <text name="prefix_num">+ {{prefix_num}}</text>
+    <image style="float:left; margin:20rpx 20rpx 0rpx 10rpx;width:30rpx;height:30rpx;" src="/img/1117597.png"/>  
+  </view><text style="float:left;color:#ccc;margin-right:20rpx width:20rpx ">|</text>
+  <input class="inputphone1" type="number" name="phone" /> 
+  <!-- 下拉需要显示的列表 -->
+  <view class="select_box" wx:if="{{select}}">
+    <view wx:for="{{prefix}}" wx:key="unique">
+      <view class="select_one" bindtap="mySelect" data-name="{{item}}">{{item}}</view>
+    </view>
+  </view>
+</view>
+<view class="roomnum"><view class="tn">身份证号 </view> <view class="tn1"><input class="inputname" bindblur="id" type="idcard" value="{{idnumber}}" name="idnumber"/><image class="getidnumber" bindtap="uploadImg" src="/img/1223094.png"></image> </view></view>
+<view class="roomnum"><view class="tn">预计到店 </view> <view class="tn1" style="color:#3db389">预订成功后房间将为您整晚保留 </view></view>
+</view>
+
+<!--
+<view class="renlian">
+<view class="r-img"> <image class="renlianimg" src="/img/renlian.png"/>  </view>
+<view class="notice"> 进行人脸登记后，到店后人脸识别即可完成入住登记和进入房间</view>
+</view>
+-->
+
+<view class="pay">
+<view class="total"><text style="margin-left:20rpx;font-size:22rpx"> 在线支付 </text> <text style="color:#f77f00;font-size:35rpx">￥{{price}}</text></view>
+
+<view class="payfor"><button style="color: #fff; width: 80%;font-size:30rpx; background-color: #f77f00;" formType="submit">提交订单</button></view>
+
+</view>
+</form>
+</view>

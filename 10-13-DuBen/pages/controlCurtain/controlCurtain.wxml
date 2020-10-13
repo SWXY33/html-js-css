@@ -1,0 +1,33 @@
+<!--pages/controlCurtain/controlCurtain.wxml-->
+<view class="TVPage">
+<view class="curtain">窗帘</view>
+<view class="show">
+<view class="open">
+<view class="number">遮阳帘：{{model1}}%</view>
+<view class="number">遮光帘：{{model2}}%</view>
+
+</view></view>
+
+<view class="speed">
+<view class="wind-speed"></view>
+<view class="w-text" style="color:#2785e7">遮阳</view>
+
+<view class='slider'>
+<slider bindchange='sliderChange1' activeColor='#2785e7' block-size="12" value='{{model1}}' />
+<view class="small" style="color:#2785e7">小</view>
+<view class="big" style="color:#2785e7">大</view>
+</view>
+</view>
+
+
+<view class="speed">
+<view class="wind-speed"></view>
+<view class="w-text" style="color:#2785e7">遮光</view>
+
+<view class='slider'>
+<slider bindchange='sliderChange2' activeColor='#2785e7' block-size="12" value='{{model2}}' />
+<view class="small" style="color:#2785e7">小</view>
+<view class="big" style="color:#2785e7">大</view>
+</view>
+</view>
+</view>
