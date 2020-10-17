@@ -1,0 +1,132 @@
+/* pages/controllight/controllight.wxss */
+.TVPage{
+  height: 100%;
+  overflow-x: hidden;/*解决小程序页面左右晃动出现空白区域
+  hidden会让x方向上的滚动条隐藏*/
+}
+.head::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.head{
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #2785e7;
+  padding-bottom: 50rpx;
+}
+.lightimg{
+  margin-top: 50rpx;
+  width: 20%;
+  height: 200rpx;
+  margin-bottom: 30rpx;
+}
+.lightname{
+  text-align: center;
+  color: #fff;
+  font-size: 40rpx;
+}
+.on-off::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.on-off{
+  font-size: 35rpx;
+  width: 100%;
+  height: auto;
+  padding: 50rpx 8.5%;
+}
+.switch{
+  border: 1rpx solid #ccc;
+  text-align: center;
+  width: 23%;
+  height: 60rpx;
+  border-radius: 30rpx;
+  float: left;
+  line-height: 60rpx;
+  background-color: #dcdcdc;
+  margin: 0rpx 9%;
+}
+.active{
+  border: 1rpx solid #2785e7;
+  text-align: center;
+  width: 23%;
+  height: 60rpx;
+  border-radius: 30rpx;
+  float: left;
+  line-height: 60rpx;
+  color: #fff;
+  background-color: #2785e7;
+  margin: 0rpx 9%;
+}
+.slider::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.slider{
+  text-align: center;
+  margin-left: 5%;
+  width: 90%;
+  border: 1rpx solid #ccc;
+  box-shadow:0 6rpx 10rpx 2rpx  #5555551A;/*for Android*/
+  -webkit-box-shadow:0px 3px 10px 2px #5555551A;/*for IOS*/
+  border-radius: 20rpx;
+padding-bottom: 50rpx;
+}
+slider{
+  width: 70%;
+  margin-left: 15%;
+}
+.control{
+  margin: 50rpx 0rpx;
+}
+.small{
+  margin-top: -20rpx;
+  margin-left: 9%;
+  width: 25%;
+  float: left;
+ 
+}
+.big{
+  margin-top: -20rpx;
+  margin-right: 9%;
+  width: 25%;
+  float: right;
+}
+.timer{
+  margin-top: 100rpx;
+}
+.setTime{
+  font-weight: bold;
+  padding: 5rpx 20rpx;
+  font-size: 35rpx;
+  float: left;
+  color: #2785e7;
+  border: 1rpx solid #ccc;
+}
+.wind-speed{
+  margin-left: 10%;
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+}
+.w-img{
+  width: 70rpx;
+  height: 70rpx;
+  }
+  .w-text{
+    text-align: center;
+    line-height: 70rpx;
+    float: left;
+    width: 70rpx;
+    height: 70rpx;
+  }
+.i-text{
+  float:left;
+  border: none;
+  width: 150rpx;
+  height: 50rpx;
+}

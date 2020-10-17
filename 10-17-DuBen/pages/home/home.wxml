@@ -1,0 +1,174 @@
+<!--pages/home/home.wxml-->
+<view class="homePage">
+<view class="head">
+<image src="/img/home.jpg"></image>
+</view>
+<view class="information">
+<view class="inf-left">
+<view class="ll">
+<text class="name">{{hotelname}} </text>
+<image class="star" src="/img/star.png"></image>
+<image class="star" src="/img/star.png"></image>
+<image class="star" src="/img/star.png"></image>
+<image class="star" src="/img/star.png"></image>
+<image class="star" src="/img/star.png"></image>
+<text class="t1">休闲度假</text>
+<text class="t1">商务出行</text>
+</view>
+<view class="rr">
+<text class="t2">2008年开业</text>
+<text class="t2"> 2016年装修</text>
+<text class="t2">客房免费WiFi</text>
+<text class="t2">P免费停车场</text>
+</view>
+</view>
+<view class="inf-right"><text class="like">❤</text></view>
+<view class="line"></view>
+<text class="score">4.8分</text>
+<text class="estimate">自助餐</text>
+<text class="estimate">装修豪华</text>
+<text class="estimate">环境优美</text>
+<text class="goodestimate">95%好评</text>
+</view>
+<view class='divideItem'>
+     <text class='divideText'>入住{{startYear}}</text>
+     <text class='divideText'>退房{{endYear}}</text>
+</view>
+
+<!-- 日期计算  -->
+<view class='dateContent'>
+     <view class='dateItem'>
+          <view class='date' data-start1="{{startDay}}" data-start2="{{startWeek}}" data-start3="{{startMonth}}" data-start4="{{startYear}}" data-end1="{{endDay}}" data-end2="{{endWeek}}" data-end3="{{endMonth}}" data-end4="{{endYear}}" data-day="{{day}}" bindtap="chooseTime" data-startline="{{startline}}" data-startindex="{{startindex}}" data-endline="{{endline}}" data-endindex="{{endindex}}">
+               <view class='date'>
+                    <text class='day'>{{startDay}}</text>
+                    <view class='monthWeek'>
+                         <text class='month'>{{startMonth}}月</text>
+                         <text class='week'>{{startWeek}}</text>
+                    </view>
+               </view>
+          </view>
+          <view class='horizontalLine' style='width:60rpx;position:absolute;right:0;'></view>
+     </view>
+     <text class='dayCount'>{{dayCount}}天</text>
+     <view class='dateItem'>
+          <view class='horizontalLine' style='width:60rpx;position:absolute;'></view>
+          <view class='date' data-start1="{{startDay}}" data-start2="{{startWeek}}" data-start3="{{startDay}}"  data-start4="{{startYear}}" data-end1="{{endDay}}" data-end2="{{endWeek}}" data-end3="{{endMonth}}" data-end4="{{endYear}}" data-day="{{day}}" bindtap="chooseTime" data-startline="{{startline}}" data-startindex="{{startindex}}" data-endline="{{endline}}" data-endindex="{{endindex}}">
+               <view class='date'>
+                    <text class='day'>{{endDay}}</text>
+                    <view class='monthWeek'>
+                         <text class='month'>{{endMonth}}月</text>
+                         <text class='week'>{{endWeek}}</text>
+                    </view>
+               </view>
+          </view>
+     </view>
+</view>
+<!-- 日期end  -->
+<view>
+
+<view wx:for="{{roomData}}" class="room" > 
+<view class="r1"><image class="roomimg" src="../../img/room.jpg"></image></view>
+<view class="r2">
+<text class="roomname">{{item.remark}} </text>
+<image class="roomnameimg" src="/img/1225467.png"/>
+</view>
+<view class="r2">
+<text class="roominf">无餐食</text>
+<text class="roominf">双床</text>
+<text class="roominf">2人</text>
+<text class="roominf">46㎡</text>
+<text class="roominf">2-3层</text>
+</view>
+<view class="r2">
+<image class="logoimg" src="../../img/LOGO.png"></image>
+<text class="tt">全套度本智能设备</text>
+</view>
+
+<view wx:if="{{item.housetype=='HOUSE_ONE'&&HOUSE_ONE<4&&HOUSE_ONE>0}}" bindtap="roomNum" class="roomNum" data-housetype="{{item.housetype}}">仅剩{{HOUSE_ONE}}间</view>
+<view wx:elif="{{item.housetype=='HOUSE_TWO'&&HOUSE_TWO<4&&HOUSE_TWO>0}}" bindtap="roomNum" class="roomNum" data-housetype="{{item.housetype}}">仅剩{{HOUSE_TWO}}间</view>
+<view wx:elif="{{item.housetype=='HOUSE_BIG'&&HOUSE_BIG<4&&HOUSE_BIG>0}}" bindtap="roomNum" class="roomNum" data-housetype="{{item.housetype}}">仅剩{{HOUSE_BIG}}间</view>
+
+<view class="r3" wx:if="{{item.housetype=='HOUSE_ONE'&&HOUSE_ONE!=0||item.housetype=='HOUSE_TWO'&&HOUSE_TWO!=0||item.housetype=='HOUSE_BIG'&&HOUSE_BIG!=0}}" bindtap="book" data-hotelname="{{hotelname}}" data-housetype="{{item.housetype}}" data-roomname="{{item.remark}}" data-price="{{item.price}}" data-day="{{dayCount}}" data-start1="{{startDay}}" data-start2="{{startWeek}}" data-start3="{{startMonth}}" data-start4="{{startYear}}" data-end1="{{endDay}}" data-end2="{{endWeek}}" data-end3="{{endMonth}}" data-end4="{{endYear}}">
+<text class="price" >￥{{item.price}}</text>
+
+</view>
+<view class="r3n" wx:if="{{item.housetype=='HOUSE_ONE'&&HOUSE_ONE==0||item.housetype=='HOUSE_TWO'&&HOUSE_TWO==0||item.housetype=='HOUSE_BIG'&&HOUSE_BIG==0}}">
+<text class="full" style=" font-size: 25rpx;" >满房</text>
+<text class="pricen" >￥{{item.price}}</text>
+
+</view>
+
+</view>
+
+<view class="room" catchtap='rotateAnim'> 
+<view class="r1"><image class="roomimg" src="../../img/room.jpg"></image></view>
+<view class="r2">
+<text class="roomname">度假阳台双床房  </text>
+<image class="roomnameimg" src="/img/1225467.png"/>
+</view>
+<view class="r2">
+<text class="roominf">无餐食</text>
+<text class="roominf">双床</text>
+<text class="roominf">2人</text>
+<text class="roominf">46㎡</text>
+<text class="roominf">2-3层</text>
+</view>
+<view class="r2">
+<image class="logoimg" src="../../img/LOGO.png"></image>
+<text class="tt">全套度本智能设备</text>
+</view>
+<view class="r3">
+<text class="price">￥338</text>
+</view>
+<view style='transform:rotate({{degs}}deg);transition:all 0.4s;'></view>
+</view>
+<view hidden='{{degs==0}}' class="roomtype">
+  <block>
+      <view class="type">无餐食 双床 2人 ></view>
+      <view class="inf">(休闲假期) </view>
+      <view class="free">免费取消</view>
+      <view class="smoke">可吸烟</view>
+      <view class="buy"  bindtap="book" data-day="{{dayCount}}" data-start1="{{startDay}}" data-start2="{{startWeek}}" data-start3="{{startMonth}}" data-start4="{{startYear}}" data-end1="{{endDay}}" data-end2="{{endWeek}}" data-end3="{{endMonth}}" data-end4="{{endYear}}"><text class="buy1">订</text><text class="buy2">到店付</text></view>
+       <view class="dprice">￥338</view>
+  </block>
+  </view>
+  <view hidden='{{degs==0}}'  class="roomtype">
+  <block>
+      <view class="type"><text style="color:#64ce7e;">两份早餐</text> 双床 2人 ></view>
+      <view class="inf">(休闲假期) </view>
+      <view class="free">免费取消</view>
+      <view class="smoke">可吸烟</view>
+      <view class="buy" bindtap="book" data-day="{{dayCount}}" data-start1="{{startDay}}" data-start2="{{startWeek}}" data-start3="{{startMonth}}" data-start4="{{startYear}}" data-end1="{{endDay}}" data-end2="{{endWeek}}" data-end3="{{endMonth}}" data-end4="{{endYear}}"><text class="buy1">订</text><text class="buy2">到店付</text></view>
+       <view class="dprice">￥338</view>
+  </block>
+</view>
+</view>
+
+
+<view class="zhengce">
+<view><text class="z1">酒店政策</text></view>
+<view><text class="z2">入住时间：14：00以后 离店时间：12：00以前</text></view>
+<view><text class="z2">儿童及加床</text></view>
+<view class="z"><text class="z3">酒店允许携带儿童入住。</text></view>
+<view class="z"><text class="z3">18岁及以上客人视为成人。</text></view>
+<view class="z"><text class="z3">每间客房最多容纳1名17岁及以下儿童，和成人公用现有床铺。</text></view>
+<view class="z"><text class="z3">每间客房最多容纳1张婴儿床和一张加床。</text></view>
+<view class="z"><text class="z3">不接受18岁以下客人在无监护人陪同的情况下入住，身高1米以下含免费儿童早餐，</text></view><view class="z"><text class="z3">小童早餐（1.0m-1.4m之间）RMB38元/位，1.4m（含）以上RMB48元/位。</text></view>
+<view class="allzhengce"><button>全部酒店政策</button></view>
+</view>
+<view class="pingjia">
+<view class="pingjia1"><text class="z1">住客评价</text></view>
+<view class="pingjia1"><text class="p2">4.8分</text>
+<text class="p3">非常好</text>
+<text class="p4">卫生4.8</text>
+<text class="p4">环境4.8</text>
+<text class="p4">服务4.8</text>
+<text class="p4">设施4.7</text></view>
+
+<view class="z">
+<text class="p5">环境不错(402)</text>
+<text class="p5">服务周到(342)</text>
+<text class="p5">早餐丰富(289)</text>
+</view>
+</view>
+</view>

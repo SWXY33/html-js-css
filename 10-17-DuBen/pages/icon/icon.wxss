@@ -1,0 +1,4 @@
+/* pages/icon/icon.wxss */
+.iconcontainer{
+float: left;
+}
