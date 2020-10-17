@@ -1,0 +1,37 @@
+<!--pages/authentication/authentication.wxml-->
+
+  <view class="box">
+      <view class="title">
+         公安验证（姓名+身份证号+人脸）
+      </view>
+      <view class="warn">*人脸识别是否与填写的信息一致</view>
+      <view class='info'> 
+          <view class="colum">      
+              <text decode="{{true}}" class="list">姓&emsp;&emsp;名：</text>
+              <input class="input" bindblur='name' value="" ></input>       
+          </view>
+          <image src='../../img/success.png' wx:if="{{allow_name}}" class="image">允许</image>
+          <image wx:if="{{errorname}}" src='../../img/error.png'  class="image">允许</image>
+      </view>
+      <view class='info' style='margin-top:100rpx;'> 
+          <view class="colum">
+              <view class='list'>身份证号：</view>
+              <input class='input' bindblur='id' value="" ></input>
+          </view>
+          <image src='../../img/success.png' wx:if="{{allow_id}}" class="image">允许</image>
+          <image src='../../img/error.png' wx:if="{{error}}" class="image">允许</image>
+      </view>
+
+      <camera device-position="front" flash="off" binderror="error"  style="height:200px;"></camera> 
+<!-- 需要使用 button 来授权登录 -->
+
+
+<view>
+<!-- 拍照按钮 -->
+<button type="primary" bindtap="takePhoto" data-username="{{nickname}}" data-headimg="{{headimg}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="loginByrenlian"> 人脸验证 </button> 
+</view> 
+<!--<button bindtap='btnreg'> 注册须知 </button>-->
+<view style="text-align:center;margin-top:50rpx">请正脸面对相机确保验证成功</view>
+  </view>
+
+

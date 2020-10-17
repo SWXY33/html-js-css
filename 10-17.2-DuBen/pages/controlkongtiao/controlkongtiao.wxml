@@ -1,0 +1,141 @@
+<!--pages/controlkongtiao/controlkongtiao.wxml-->
+<view class="TVPage">
+<view wx:if="{{cold}}">
+<view class="kongtiao">空调</view>
+<view class="on-off">
+<view  style="margin-left: 5%;width:70%;float:left;">{{status}}</view>
+<view style="width:20%;float:right;margin-right:5%;"><switch class="kaiguan" color="#2785e7" checked="{{isChecked1}}" bindchange="changeSwitch1" /></view>
+</view>
+<view class="show">
+<view class="temperature">
+<view class="number">{{temperature}}℃</view>
+<view class="xuehuaimg"><image class="xuehua" src="/img/508116c.png"></image></view>
+</view></view>
+
+<view class="controltemperature">
+<view class="add" bindtap="addtemperature">+</view>
+<view class="sub" bindtap="subtemperature">—</view>
+</view>
+
+<view class="model">
+<view class="modelcontrol">
+<view class="cold" bindtap="model"><image class="img" src="/img/508116c.png"></image></view>
+<view class="coldtext">制冷</view></view>
+<view class="modelcontrol">
+<view class="warm" bindtap="warm"><image class="img" src="/img/1194839.png"></image></view><view class="warmtext">制热</view></view>
+<view class="modelcontrol">
+<view class="auto" bindtap="auto"><image class="img" src="/img/1168287.png"></image></view><view class="autotext">自动</view></view>
+</view>
+
+<view class="speed">
+<view class="wind-speed"><image class="w-img" src="/img/566982.png"></image></view>
+<view class="w-text" style="color:#2785e7">风速</view>
+
+<view class='slider'>
+<slider bindchange='sliderChange' activeColor='#2785e7' block-size="12" value='50' />
+<view class="small" style="color:#2785e7">小</view>
+<view class="big" style="color:#2785e7">大</view>
+</view>
+</view>
+
+<view class="timer">
+<view class="wind-speed"><image class="w-img" src="/img/1179302.png"></image></view>
+<view class="w-text" style="color:#2785e7">定时</view>
+
+<view class="setTime"><input class="i-text" type="number" style="text-align:center;border-bottom: 1rpx solid #2785e7;"></input> <view style="margin:0rpx 30rpx;float:left;color:#2785e7"> 时 </view> <input type="number" class="i-text" style="text-align:center;border-bottom: 1rpx solid #2785e7;"></input> <view style="margin:0rpx 30rpx;float:left;color:#2785e7"> 分 </view></view>
+</view>
+</view>
+
+<view wx:if="{{warm}}">
+<view class="kongtiao">空调</view>
+<view class="on-off">
+<view  style="margin-left: 5%;width:70%;float:left;">{{status}}</view>
+<view style="width:20%;float:right;margin-right:5%;"><switch class="kaiguan-warm" color="#fe6e09" checked="{{isChecked1}}" bindchange="changeSwitch1" /></view>
+</view>
+<view class="show">
+<view class="temperature-warm">
+<view class="number">{{temperature}}℃</view>
+<view class="xuehuaimg"><image class="xuehua" src="/img/1194839.png"></image></view>
+</view></view>
+
+<view class="controltemperature">
+<view class="add-warm" bindtap="addtemperature">+</view>
+<view class="sub-warm" bindtap="subtemperature">—</view>
+</view>
+
+<view class="model">
+<view class="modelcontrol">
+<view class="cold" bindtap="cold"><image class="img" src="/img/508116c.png"></image></view>
+<view class="coldtext">制冷</view></view>
+<view class="modelcontrol">
+<view class="warm" bindtap="warm"><image class="img" src="/img/1194839.png"></image></view><view class="warmtext">制热</view></view>
+<view class="modelcontrol">
+<view class="auto" bindtap="auto"><image class="img" src="/img/1168287.png"></image></view><view class="autotext">自动</view></view>
+</view>
+
+<view class="speed">
+<view class="wind-speed"><image class="w-img" src="/img/566982w.png"></image></view>
+<view class="w-text" style="color:#fe6e09">风速</view>
+
+<view class='slider'>
+<slider bindchange='sliderChange' activeColor='#fe6e09' block-size="12" value='50' />
+<view class="small" style="color:#fe6e09">小</view>
+<view class="big" style="color:#fe6e09">大</view>
+</view>
+</view>
+
+<view class="timer">
+<view class="wind-speed"><image class="w-img" src="/img/1194978w.png"></image></view>
+<view class="w-text" style="color:#fe6e09">定时</view>
+
+<view class="setTime"><input type="number" class="i-text" style="text-align:center;color:#fe6e09;border-bottom: 1rpx solid #fe6e09;"></input> <view style="margin:0rpx 30rpx;float:left;color:#fe6e09"> 时 </view> <input type="number" class="i-text" style="text-align:center;border-bottom: 1rpx solid #fe6e09;"></input> <view style="color:#fe6e09;margin:0rpx 30rpx;float:left"> 分 </view></view>
+</view>
+</view>
+
+
+<view wx:if="{{auto}}">
+<view class="kongtiao">空调</view>
+<view class="on-off">
+<view  style="margin-left: 5%;width:70%;float:left;">{{status}}</view>
+<view style="width:20%;float:right;margin-right:5%;"><switch class="kaiguan" color="#2785e7" checked="{{isChecked1}}" bindchange="changeSwitch1" /></view>
+</view>
+<view class="show">
+<view class="temperature">
+<view class="number">{{temperature}}℃</view>
+<view class="xuehuaimg"><image class="xuehua" src="/img/1168287.png"></image></view>
+</view></view>
+
+<view class="controltemperature">
+<view class="add" bindtap="addtemperature">+</view>
+<view class="sub" bindtap="subtemperature">—</view>
+</view>
+
+<view class="model">
+<view class="modelcontrol">
+<view class="cold" bindtap="cold"><image class="img" src="/img/508116c.png"></image></view>
+<view class="coldtext">制冷</view></view>
+<view class="modelcontrol">
+<view class="warm" bindtap="warm"><image class="img" src="/img/1194839.png"></image></view><view class="warmtext">制热</view></view>
+<view class="modelcontrol">
+<view class="auto" bindtap="auto"><image class="img" src="/img/1168287.png"></image></view><view class="autotext">自动</view></view>
+</view>
+
+<view class="speed">
+<view class="wind-speed"><image class="w-img" src="/img/566982.png"></image></view>
+<view class="w-text" style="color:#2785e7">风速</view>
+
+<view class='slider'>
+<slider bindchange='sliderChange' activeColor='#2785e7' block-size="12" value='50' />
+<view class="small" style="color:#2785e7">小</view>
+<view class="big" style="color:#2785e7">大</view>
+</view>
+</view>
+
+<view class="timer">
+<view class="wind-speed"><image class="w-img" src="/img/1179302.png"></image></view>
+<view class="w-text">定时</view>
+
+<view class="setTime"><input type="number" style="text-align:center;border-bottom: 1rpx solid #2785e7;" class="i-text"></input> <view style="margin:0rpx 30rpx;float:left"> 时 </view> <input type="number" class="i-text" style="text-align:center;border-bottom: 1rpx solid #2785e7;"></input> <view style="margin:0rpx 30rpx;float:left"> 分 </view></view>
+</view>
+</view>
+</view>

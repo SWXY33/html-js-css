@@ -1,0 +1,5 @@
+身份证信息：
+<view><image style="width:300rpx;height:300rpx;" src="{{headimg}}"></image> </view>
+<view wx:for="{{Information}}">
+{{index}}-----{{item.words}}
+</view>

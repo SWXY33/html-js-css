@@ -1,0 +1,23 @@
+<!--pages/myhouse/myhouse.wxml-->
+
+<view  wx:if="{{orderState}}">
+<view wx:for="{{orderData}}" class="myorder">
+<view class="myroom" bindtap="myroom">
+<view class="left"><image class="roomimg" src="../../img/room.jpg"></image></view>
+<view class="center">
+<view class="hotelname">{{hotelName}} </view>
+<view class="roomname">房间号：{{item.houseno}}</view>
+<view class="ordertime">下单时间：2020-10-17</view>
+</view>
+<view class="orderNumber">订单号：{{item.ordernumber}}</view>
+<view class="right">待入住</view>
+</view>
+<view class="ISbook" wx:if="{{item.state}}" bindtap="cancelBook" data-ordernumber="{{item.ordernumber}}">{{cancelBook}}</view>
+<view wx:else class="ISbook">{{comfircancel}}</view>
+
+</view>
+
+</view>
+<view wx:else class="no_order">
+  尚未有您的订单信息，快去预订吧
+</view>

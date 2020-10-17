@@ -1,0 +1,26 @@
+<!--pages/controTV/controlTV.wxml-->
+<view class="TVPage">
+<view class="tv">电视</view>
+<view class="control"> 
+<view class="dianyuan"><image class="on-off" src="/img/1256919.png"></image></view>
+<view class="shouye"><image class="home" src="/img/home_press.png"></image></view>
+</view>
+
+<view class="shang"><image class="shangimg" src="/img/1117597.png" /></view>
+<view class="left"><image class="zuoimg" src="/img/1117597.png" /></view>
+<view class="menu">菜单</view>
+<view class="right"><image class="youimg" src="/img/1117597.png" /></view>
+<view class="xia"><image class="xiaimg" src="/img/1117597.png" /></view>
+
+<view class="voice">
+<view class="add">+</view>
+<view class="voiceimg"><image class="vimg" src="/img/voice.png"></image></view>
+<view class="sub">—</view>
+</view>
+
+<view class="pindao">
+<view class="add">+</view>
+<view class="voiceimg"><image class="vimg" src="/img/pindao.png"></image></view>
+<view class="sub">—</view>
+</view>
+</view>
