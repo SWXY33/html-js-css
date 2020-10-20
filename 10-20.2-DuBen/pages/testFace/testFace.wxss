@@ -1,0 +1,12 @@
+/* pages/testFace/testFace.wxss */
+.loginByrenlian{
+margin-top: 50rpx;
+}
+
+camera{
+  margin: 50rpx 5% 0 5%;
+  padding: 5%;
+  height: 70%;
+  width: 80%;
+  border: dashed 1rpx rgb(185, 185, 189);
+}
